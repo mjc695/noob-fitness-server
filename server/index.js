@@ -1,6 +1,5 @@
 const db = require('./db');
 const express = require('express');
-const morgan = require('morgan');
 const volleyball = require('volleyball');
 const session = require('express-session');
 // const SequelizeStore = require('connect-session-sequelize'(session.Store))
