@@ -1,5 +1,5 @@
 const db = require('./db');
-const express = requrie('express');
+const express = require('express');
 const morgan = require('morgan');
 const volleyball = require('volleyball');
 const session = require('express-session');
