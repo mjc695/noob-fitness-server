@@ -35,7 +35,7 @@ const seed = async () => {
   await db.sync({ force: true });
 
   await User.bulkCreate(users);
-  await Promise.all([exercises.map(exercise => Exercise.create(exercise))]);
+  await Exercise.bulkCreate(exercises);
   await Promise.all(usersExercise.map(set => UserExercise.create(set)));
 
   console.log(green('Seeding success!'));
