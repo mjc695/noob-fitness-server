@@ -4,9 +4,7 @@ module.exports = router;
 
 router.get('/', async (req, res, next) => {
   try {
-    const exercise = await Exercise.findAll({
-      attributes: ['id', 'firstName', 'lastName', 'email', 'isAdmin'],
-    });
+    const exercise = await Exercise.findAll();
     res.json(exercise);
   } catch (err) {
     console.log(err);
