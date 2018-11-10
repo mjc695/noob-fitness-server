@@ -39,7 +39,7 @@ const seed = async () => {
   await Promise.all([usersExercise.map(set => UserExercise.create(set))]);
 
   console.log(green('Seeding success!'));
-  db.close();
+  await db.close();
 };
 
 seed().catch(err => {
