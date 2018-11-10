@@ -35,8 +35,8 @@ const seed = async () => {
   await db.sync({ force: true });
 
   await Promise.all([users.map(users => User.create(users))]);
-  await Promise.all([exercises.map(exercise => Exercise.create(exercise))]);
-  await Promise.all(usersExercise.map(set => UserExercise.create(set)));
+  await Promise.all([[exercises.map(exercise => Exercise.create(exercise))]]);
+  await Promise.all([usersExercise.map(set => UserExercise.create(set))]);
 
   console.log(green('Seeding success!'));
   await db.close();
