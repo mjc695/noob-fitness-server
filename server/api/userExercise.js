@@ -1,9 +1,9 @@
-const { userExercise } = require('../db/models');
 const router = require('express').Router();
+const { UserExercise } = require('../db/models');
 
 router.get('/', async (req, res, next) => {
   try {
-    const allUserExercises = await userExercise.findAll();
+    const allUserExercises = await UserExercise.findAll();
     res.json(allUserExercises);
   } catch (err) {
     console.log(err);
@@ -12,7 +12,7 @@ router.get('/', async (req, res, next) => {
 
 router.get('/:userId', async (req, res, next) => {
   try {
-    curUserExercise = await userExercise.findAll({
+    curUserExercise = await UserExercise.findAll({
       where: {
         userId: req.params.userId,
       },
@@ -25,7 +25,7 @@ router.get('/:userId', async (req, res, next) => {
 
 router.post('/:userId', async (req, res, next) => {
   try {
-    newUserExercise = await userExercise.create(req.body);
+    newUserExercise = await UserExercise.create(req.body);
     res.json(newUserExercise);
   } catch (err) {
     console.log(err);
