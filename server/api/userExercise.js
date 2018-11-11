@@ -6,7 +6,7 @@ router.get('/', async (req, res, next) => {
     const allUserExercises = await UserExercise.findAll();
     res.json(allUserExercises);
   } catch (err) {
-    console.log(err);
+    next(err);
   }
 });
 
@@ -19,7 +19,7 @@ router.get('/:userId', async (req, res, next) => {
     });
     res.json(curUserExercise);
   } catch (err) {
-    console.log(err);
+    next(err);
   }
 });
 
@@ -29,7 +29,7 @@ router.post('/:userId', async (req, res, next) => {
     newUserExercise = await UserExercise.create(req.body);
     res.json(newUserExercise);
   } catch (err) {
-    console.log(err);
+    next(err);
   }
 });
 
