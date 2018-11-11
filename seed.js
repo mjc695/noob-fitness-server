@@ -14,9 +14,19 @@ const users = [
 ];
 const exercises = [
   {
-    name: 'deadlift',
+    name: 'Deadlift',
     type: 'compound',
     description: 'very difficult description',
+  },
+  {
+    name: 'Squat',
+    type: 'compound',
+    description: 'lift with your hips not your knees',
+  },
+  {
+    name: 'Bench Press',
+    type: 'compound',
+    description: 'chest day is every day',
   },
 ];
 const usersExercise = [

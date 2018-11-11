@@ -2,6 +2,9 @@ const db = require('../db');
 const sequelize = require('sequelize');
 
 const UserExercise = db.define('userExercise', {
+  WorkoutId: {
+    type: sequelize.INTEGER,
+  },
   set: {
     type: sequelize.STRING,
   },

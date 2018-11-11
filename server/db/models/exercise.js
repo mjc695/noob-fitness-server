@@ -11,9 +11,6 @@ const Exercise = db.define('exercise', {
   description: {
     type: sequelize.TEXT,
   },
-  video: {
-    type: sequelize.STRING,
-  },
 });
 
 module.exports = Exercise;
