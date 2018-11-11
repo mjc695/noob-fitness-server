@@ -17,7 +17,7 @@ router.get('/:userId', async (req, res, next) => {
         userId: req.params.userId,
       },
     });
-    curUserExercise = allWorkouts.map(workout => {
+    curUserExercise = allWorkouts.map(async workout => {
       return await UserExercise.findAll({
         where: {
           workoutId: workout.id,
