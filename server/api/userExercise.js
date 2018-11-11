@@ -25,6 +25,7 @@ router.get('/:userId', async (req, res, next) => {
 
 router.post('/:userId', async (req, res, next) => {
   try {
+    console.log('req.body in post request', req.body);
     newUserExercise = await UserExercise.create(req.body);
     res.json(newUserExercise);
   } catch (err) {
