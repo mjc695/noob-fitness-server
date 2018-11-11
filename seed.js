@@ -16,12 +16,12 @@ const exercises = [
   {
     name: 'Deadlift',
     type: 'compound',
-    description: 'very difficult description',
+    description: 'pick things up and put them down',
   },
   {
     name: 'Squat',
     type: 'compound',
-    description: 'lift with your hips not your knees',
+    description: 'makes you look like you are pooping',
   },
   {
     name: 'Bench Press',
